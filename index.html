@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
+
+<div id="wrapper">
+    <div class="page-header">
+        <h1>Envelope Awards Calendar</h1>
+    </div>
+    <table id="awards" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Award Show</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Code -->
+
+<script type="text/javascript">
+  window.onload = function() { init() };
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AmXUp_k1PfvcdGJqbm1TTElEUW16YXJXZWZsakFXaEE&output=html';
+
+  var todaysDate = new Date()
+
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     wanted: ["Sheet1"],
+                     debug: true })
+  }
+
+  function showInfo(data, tabletop) {
+    jQuery.each( tabletop.sheets("Sheet1").all(), function(i, show) {
+        var show_td = jQuery('<tr><td>' + show.name + '</td><td>' + show.date + '</td></tr>')
+        show_td.appendTo("#awards tbody")
+    })
+  }
+
+</script>
+
+<!-- libs -->
+<script src="http://www.latimes.com/hive/javascripts/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="https://raw.github.com/jsoma/tabletop/master/src/tabletop.js"></script>
+<script type="text/javascript" src="https://dl.dropbox.com/u/127788/jquery.tablesorter.js"></script>
