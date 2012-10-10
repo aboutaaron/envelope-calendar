@@ -25,23 +25,34 @@ jQuery(document).ready(function() {
 
       var today = moment()
       // Turn date into date object with Date.js
-      // .format('MMMM DD, YYYY');
-      // awardShowDate.from(today)
+      // Regular formatting => awardShowDate.format('MMMM DD, YYYY')
+      // Get format "in two days, etc" => awardShowDate.from(today)
       var awardShowDate = moment(show.date)
 
       // Build HTML
-      var show_td = jQuery('<tr><td>' + show.name + '</td><td>' + awardShowDate.format('MMMM DD, YYYY') + '</td></tr>')
+      // ==========
 
-      // Append to DOM
-      show_td.appendTo("#awards tbody")
+      // Empty var
+      var show_td = ""
 
-      console.log(show.special)
+      // If the difference in days from the event is greater than or equal to 0(today), Add it to the table
+      if(awardShowDate.diff(today, 'days') >= 0 ) {
+        show_td = jQuery('<tr><td>' + show.name + '</td><td>' + awardShowDate.format('MMMM DD, YYYY') + '</td></tr>')
+          // Append to DOM
+          .appendTo("#awards tbody")
+      } else {
+        // Else, do nothing and console.log so I know it was evaluated.
+        console.log(show.name)
+      }
+
+      //console.log(show.special)
       showArr.push(show)
-    }) // .each
 
-  } // showInfo
+    }) // jQuery.each()
 
-}); // (document).ready
+  } // showInfo()
+
+}); // jQuery(document).ready
 
 
 
