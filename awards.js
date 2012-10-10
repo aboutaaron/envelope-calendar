@@ -5,9 +5,6 @@ Aaron Williams, 2012
 Los Angeles Times
 */
 
-// Creating global var
-var showArr = []
-
 jQuery(document).ready(function() {
 
   // Setup
@@ -44,9 +41,6 @@ jQuery(document).ready(function() {
         // Else, do nothing and console.log so I know it was evaluated.
         console.log(show.name)
       }
-
-      //console.log(show.special)
-      showArr.push(show)
 
     }) // jQuery.each()
 
