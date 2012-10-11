@@ -1,20 +1,27 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<!-- <script src="http://www.latimes.com/hive/javascripts/jquery-1.3.2.js"></script> -->
-
-<title>Envelope Calender Demo</title>
-<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/elections.latimes.com/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Awards Calendar</title>
+    <!-- LA Times styles -->
+    <link href="style-0.23.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
 <div id="wrapper">
     <div class="page-header">
-        <h1>Upcoming awards events</h1>
+        <h1 class="title">Awards Calendar</h1>
+        <small id="subhed">Your guide to upcoming nominations and awards</small>
     </div>
     <ul id="showList" class="unstyled"></ul>
 </div>
 
-<!-- Original and CoffeeScript for dev -->
-<!-- <script type="text/coffeescript" src="awards.coffee"></script> -->
+<!-- List code -->
+<!-- <script src="http://www.latimes.com/hive/javascripts/jquery-1.3.2.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="awards.js"></script>
 
 <!-- libs -->
-<script type="text/javascript" src="https://raw.github.com/jsoma/tabletop/master/src/tabletop.js"></script>
-<script type="text/javascript" src="https://raw.github.com/timrwood/moment/1.7.2/min/moment.min.js"></script>
+<script type="text/javascript" src="libs/tabletop.js"></script>
+<script type="text/javascript" src="libs/moment.min.js"></script>
+
+</html>

@@ -1,0 +1,10 @@
+#wrapper {
+  width: 336px;
+}
+.page-header h1 {
+  font-family: "Georgia", Times, serif;
+}
+.page-header small {
+  font-family: "Tahoma", Arial, san-serif;
+  font-size: 16px;
+}
