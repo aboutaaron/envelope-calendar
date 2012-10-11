@@ -34,10 +34,10 @@ jQuery(document).ready(function () {
 
       // If the difference in days from the event is greater than or equal to 0(today), Add it to the table
       if(awardShowDate.diff(today, 'days') > 0 ) {
-        show_td = jQuery('<li><strong>' + show.name + '</strong> | ' + awardShowDate.format('MMM DD, YYYY') + '</li>')
+        show_td = jQuery('<li><span class="listContent"><strong>' + show.name + '</strong> | ' + awardShowDate.format('MMM DD, YYYY') + '</span></li>')
           .appendTo("#showList")
       } else if(awardShowDate.diff(today, 'days') == 0) {
-          show_td = jQuery('<li><strong>' + show.name + '</strong> | ' + awardShowDate.calendar() + '</li>')
+          show_td = jQuery('<li><span class="listContent"><strong>' + show.name + '</strong> | ' + awardShowDate.calendar() + '</span></li>')
           .appendTo("#showList")
       } else {
         // Else, do nothing and console.log so I know it was evaluated.

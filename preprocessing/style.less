@@ -3,23 +3,49 @@
 @serif: "Georgia", Times, serif;
 @sanSerif: "Tahoma", Arial, san-serif;
 @defaultFontSize: 16px;
+@gray: #e2e2e2;
+@border: 1px @gray solid;
 
 // SCAFFOLDING
 // ===========
 
 #wrapper {
-    width: 336px;
+    width: 370px;
+    height: 343px;
+    overflow: auto;
+    // Only for clarity while I prototype. Not needed after in theory
+    margin: 20px;
+    border: @border;
 }
 
 .page-header {
 
+    border-bottom: @border;
+    padding-bottom: 5px;
+
     h1 {
         font-family: @serif;
+        margin: 10px;
     }
 
     small {
         font-family: @sanSerif;
-        font-size: @defaultFontSize;
+        font-size: (@defaultFontSize - 1);
+        padding-bottom: 15px;
+        margin: 10px;
     }
 
+}
+
+ul#showList {
+    margin-top: 10px;
+
+    li {
+        border-bottom: @border;
+    }
+
+    .listContent {
+        margin: 10px;
+        display: inline-block;
+    }
 }

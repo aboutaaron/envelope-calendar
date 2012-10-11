@@ -1,10 +1,31 @@
 #wrapper {
-  width: 336px;
+  width: 370px;
+  height: 343px;
+  overflow: auto;
+  margin: 20px;
+  border: 1px #e2e2e2 solid;
+}
+.page-header {
+  border-bottom: 1px #e2e2e2 solid;
+  padding-bottom: 5px;
 }
 .page-header h1 {
   font-family: "Georgia", Times, serif;
+  margin: 10px;
 }
 .page-header small {
   font-family: "Tahoma", Arial, san-serif;
-  font-size: 16px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  margin: 10px;
+}
+ul#showList {
+  margin-top: 10px;
+}
+ul#showList li {
+  border-bottom: 1px #e2e2e2 solid;
+}
+ul#showList .listContent {
+  margin: 10px;
+  display: inline-block;
 }
