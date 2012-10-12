@@ -3,11 +3,12 @@
 @serif: "Georgia", Times, serif;
 @sanSerif: "Tahoma", Arial, san-serif;
 @defaultFontSize: 16px;
-@gray: #e2e2e2;
-@border: 1px @gray solid;
+@gray: #CDCDCD;
+@border: 2px @gray solid;
 @red: #942928;
 @gold: #BD9F2F;
 
+// FOR DEBUG ONLY
 .pizza {
     // Only for clarity while I prototype. Not needed after in theory
     margin: 20px;
@@ -17,27 +18,27 @@
 // ===========
 
 .app-container {
-    width: 370px;
-    height: 409px; //343px
+    width: 333px;
+    height: 383px; //343px, 408px
     border: @border;
+    margin-bottom: 19px;
 }
 
 #wrapper {
-    width: 370px;
-    height: 343px;
+    width: 333px;
+    height: 302px;
     overflow: auto;
-    //border: @border;
 }
 
 .page-header {
 
     border-bottom: @border;
     padding-bottom: 5px;
-    width: 370px;
+    width: 333px;
 
     h1 {
         font-family: @serif;
-        margin: 5px 0px 5px 18px;
+        margin: 5px 0px -4px 18px;
         color: @red;
         font-weight: bold;
     }
@@ -52,43 +53,42 @@
 
 }
 
-.fixed {
-    position: absolute;
-    z-index:100000;
-    margin-bottom: 10px;
-    display: block;
-}
-
 // LIST
 // ====
 
 ul#showList {
     margin-top: 10px;
+    margin-left: 0px; // LAT override
 
     li {
         border-bottom: @border;
+        overflow-x: hidden; // Windows fix
 
     }
 
     :first-child {
-        margin-top: -3px;
+        margin-top: -6px;
+    }
+
+    :last-child {
+        border-bottom: 0px;
     }
 
     .listContent {
         margin: 15px;
-        //padding: 6px;
         display: inline-block;
     }
 }
 
 .waffles {
+    margin-top: 5px;
+
     #contentWrapper {
         background-color: lighten(@gold, 22%);
-        //padding: 10px;
         display: inline-block;
         margin: 5px;
         border-radius: 2px;
-        width: 345px;
+        width: 307px;
         .listContent {
             margin-left: 12px;
         }

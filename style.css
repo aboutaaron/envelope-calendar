@@ -2,23 +2,24 @@
   margin: 20px;
 }
 .app-container {
-  width: 370px;
-  height: 409px;
-  border: 1px #e2e2e2 solid;
+  width: 333px;
+  height: 383px;
+  border: 2px #cdcdcd solid;
+  margin-bottom: 19px;
 }
 #wrapper {
-  width: 370px;
-  height: 343px;
+  width: 333px;
+  height: 302px;
   overflow: auto;
 }
 .page-header {
-  border-bottom: 1px #e2e2e2 solid;
+  border-bottom: 2px #cdcdcd solid;
   padding-bottom: 5px;
-  width: 370px;
+  width: 333px;
 }
 .page-header h1 {
   font-family: "Georgia", Times, serif;
-  margin: 5px 0px 5px 18px;
+  margin: 5px 0px -4px 18px;
   color: #942928;
   font-weight: bold;
 }
@@ -29,31 +30,33 @@
   margin: 5px 0px -13px 18px;
   display: block;
 }
-.fixed {
-  position: absolute;
-  z-index: 100000;
-  margin-bottom: 10px;
-  display: block;
-}
 ul#showList {
   margin-top: 10px;
+  margin-left: 0px;
 }
 ul#showList li {
-  border-bottom: 1px #e2e2e2 solid;
+  border-bottom: 2px #cdcdcd solid;
+  overflow-x: hidden;
 }
 ul#showList :first-child {
-  margin-top: -3px;
+  margin-top: -6px;
+}
+ul#showList :last-child {
+  border-bottom: 0px;
 }
 ul#showList .listContent {
   margin: 15px;
   display: inline-block;
+}
+.waffles {
+  margin-top: 5px;
 }
 .waffles #contentWrapper {
   background-color: #dfca7d;
   display: inline-block;
   margin: 5px;
   border-radius: 2px;
-  width: 345px;
+  width: 307px;
 }
 .waffles #contentWrapper .listContent {
   margin-left: 12px;
