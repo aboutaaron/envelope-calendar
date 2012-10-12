@@ -5,47 +5,92 @@
 @defaultFontSize: 16px;
 @gray: #e2e2e2;
 @border: 1px @gray solid;
+@red: #942928;
+@gold: #BD9F2F;
+
+.pizza {
+    // Only for clarity while I prototype. Not needed after in theory
+    margin: 20px;
+}
 
 // SCAFFOLDING
 // ===========
+
+.app-container {
+    width: 370px;
+    height: 409px; //343px
+    border: @border;
+}
 
 #wrapper {
     width: 370px;
     height: 343px;
     overflow: auto;
-    // Only for clarity while I prototype. Not needed after in theory
-    margin: 20px;
-    border: @border;
+    //border: @border;
 }
 
 .page-header {
 
     border-bottom: @border;
     padding-bottom: 5px;
+    width: 370px;
 
     h1 {
         font-family: @serif;
-        margin: 10px;
+        margin: 5px 0px 5px 18px;
+        color: @red;
+        font-weight: bold;
     }
 
-    small {
+    small#subhed {
         font-family: @sanSerif;
         font-size: (@defaultFontSize - 1);
         padding-bottom: 15px;
-        margin: 10px;
+        margin: 5px 0px -13px 18px;
+        display: block;
     }
 
 }
+
+.fixed {
+    position: absolute;
+    z-index:100000;
+    margin-bottom: 10px;
+    display: block;
+}
+
+// LIST
+// ====
 
 ul#showList {
     margin-top: 10px;
 
     li {
         border-bottom: @border;
+
+    }
+
+    :first-child {
+        margin-top: -3px;
     }
 
     .listContent {
-        margin: 10px;
+        margin: 15px;
+        //padding: 6px;
         display: inline-block;
+    }
+}
+
+.waffles {
+    #contentWrapper {
+        background-color: lighten(@gold, 22%);
+        //padding: 10px;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 2px;
+        width: 345px;
+        .listContent {
+            margin-left: 12px;
+        }
     }
 }
