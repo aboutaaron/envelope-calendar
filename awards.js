@@ -37,7 +37,7 @@ jQuery(document).ready(function () {
                     .appendTo("#showList").addClass(show.special);
             } else {
                 // Else, do nothing and console.log the award so I know it was evaluated.
-                console.log("Past shows: \n" + show.name + " | " + awardShowDate.format('MMM DD, YYYY') + " => " + awardShowDate.diff(today, 'days'));
+                //console.log("Past shows: \n" + show.name + " | " + awardShowDate.format('MMM DD, YYYY') + " => " + awardShowDate.diff(today, 'days'));
             }
 
         }); // jQuery.each()
