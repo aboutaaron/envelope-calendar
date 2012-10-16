@@ -11,6 +11,7 @@
   width: 333px;
   height: 302px;
   overflow: auto;
+  position: relative;
 }
 .page-header {
   border-bottom: 2px #cdcdcd solid;
@@ -33,6 +34,7 @@
 ul#showList {
   margin-top: 10px;
   margin-left: 0px;
+  list-style-position: outside;
 }
 ul#showList li {
   border-bottom: 2px #cdcdcd solid;

@@ -28,6 +28,7 @@
     width: 333px;
     height: 302px;
     overflow: auto;
+    position: relative; // IE fix
 }
 
 .page-header {
@@ -59,6 +60,7 @@
 ul#showList {
     margin-top: 10px;
     margin-left: 0px; // LAT override
+    list-style-position: outside; // LAT override
 
     li {
         border-bottom: @border;
