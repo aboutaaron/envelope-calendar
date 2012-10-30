@@ -1,6 +1,9 @@
+/* FOR DEBUG ONLY
 .pizza {
-  margin: 20px;
+    // Only for clarity while I prototype. Not needed after in theory
+    margin: 20px;
 }
+*/
 .app-container {
   width: 333px;
   height: 383px;
@@ -50,16 +53,16 @@ ul#showList .listContent {
   margin: 15px;
   display: inline-block;
 }
-.waffles {
+.important {
   margin-top: 5px;
 }
-.waffles #contentWrapper {
+.important #contentWrapper {
   background-color: #dfca7d;
   display: inline-block;
   margin: 5px;
   border-radius: 2px;
   width: 307px;
 }
-.waffles #contentWrapper .listContent {
+.important #contentWrapper .listContent {
   margin-left: 12px;
 }
