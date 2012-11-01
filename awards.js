@@ -33,7 +33,7 @@ jQuery(document).ready(function () {
                 jQuery('<li><div id="contentWrapper"><span class="listContent"><strong>' + '<a href='+show.link+'>'+show.name+'</a></strong> | ' + awardShowDate.format('MMM DD, YYYY') + '</span></div></li>')
                     .appendTo("#showList").addClass(show.special);
             } else if (awardShowDate.diff(today, 'days') === 0) {
-                jQuery('<li><div id="contentWrapper"><span class="listContent"><strong>' + '<a href='+show.link+'>'+show.name+'</a></strong> | ' + awardShowDate.calendar() + '</span></div></li>')
+                jQuery('<li><div id="contentWrapper"><span class="listContent"><strong>' + '<a href='+show.link+'>'+show.name+'</a></strong> | ' + awardShowDate.calendar('MMMM') + '</span></div></li>')
                     .appendTo("#showList").addClass(show.special);
             } else {
                 // Else, do nothing and console.log the award so I know it was evaluated.
