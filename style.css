@@ -66,3 +66,6 @@ ul#showList .listContent {
 .important #contentWrapper .listContent {
   margin-left: 12px;
 }
+.important #contentWrapper .listContent a {
+  font-weight: bold;
+}
